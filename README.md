@@ -19,9 +19,9 @@ This is a local MCP server for Mem0, allowing you to store and search memories d
    ```
 
 2. **Configure API Key**:
-   🚀 **推荐方式**：直接在 `mcp.json` 的 `env` 部分设置 `MEM0_API_KEY`（无需创建 .env 文件，见下文 Cursor 配置）。
+   🚀 **Recommended**: Set `MEM0_API_KEY` **directly in the `env` section of `mcp.json`** (no .env file needed, see Cursor config below).
 
-   **或使用 .env 文件**：
+   **Or use .env file**:
    - Copy `.env.example` to `.env`:
      ```bash
      cp .env.example .env
@@ -49,7 +49,7 @@ Add the following entry to your Cursor `mcp.json` file (usually located at `~/.c
 ```
 
 **Note**: 
-- 🚀 **首选**：Set `MEM0_API_KEY` **directly in the `env` section of `mcp.json`** - FastMCP passes it to the server process automatically.
+- 🚀 **Preferred**: Set `MEM0_API_KEY` **directly in the `env` section of `mcp.json`** - FastMCP passes it to the server process automatically.
 - **Alternative**: Use `.env` file (loaded via `python-dotenv`). Ensure server runs from the directory containing `.env`.
 - Ensure the python command points to the python environment where you installed the requirements (e.g., if you used a venv, point to `venv/bin/python`).
 
