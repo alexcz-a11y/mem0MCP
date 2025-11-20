@@ -18,13 +18,19 @@
    ```
 
 2. **配置 API 密钥**：
+   🚀 **推荐方式**：直接在 `mcp.json` 的 `env` 部分设置 `MEM0_API_KEY`（**无需创建 .env 文件**，见下文 Cursor 配置）。
+
+   **或使用 .env 文件**：
    - 复制 `.env.example` 为 `.env`：
      ```bash
      cp .env.example .env
      ```
    - 编辑 `.env`，将 `your_mem0_api_key_here` 替换为您的真实 Mem0 API 密钥。
 
-   **备选方式**：直接在 `mcp.json` 的 `env` 部分设置 `MEM0_API_KEY`（见下文）。
+**注意**：
+- 🚀 **首选**：在 `mcp.json` 的 `env` 部分直接设置 `MEM0_API_KEY` - FastMCP 会自动传递到 server.py 进程。
+- **备选**：使用 `.env` 文件（通过 `python-dotenv` 加载）。确保从包含 `.env` 的目录运行服务器。
+- 确保 `command` 指向安装了依赖的 Python 环境（例如使用 venv 时指向 `venv/bin/python`）。
 
 ## Cursor 配置（`mcp.json`）
 
